@@ -34,7 +34,7 @@ component:
 (defn root []
   (assert false "Oops"))
 
-(r/render-component (fn [] [error-boundary [root]])
+(r/render-component [(fn [] [error-boundary [root]])]
                     (.. js/document (querySelector \"#container\")))
 ```
 
