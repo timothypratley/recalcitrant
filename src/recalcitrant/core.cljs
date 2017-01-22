@@ -88,7 +88,7 @@
   (ns my-ns
     (:require [error-boundary.error-boundary :refer [error-boundary]]))
 
-  (r/render-component (fn [] [error-boundary [root]])
+  (r/render-component [(fn [] [error-boundary [root]])]
                       (.. js/document (querySelector \"#container\")))
 
   Note that this relies on the undocumented unstable_handleError API introduced
